@@ -8,7 +8,7 @@ class DashboardDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(flex: 1, child: Sidebar()),
         Expanded(flex: 3, child: MainContentArea()),
