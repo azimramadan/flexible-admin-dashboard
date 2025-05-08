@@ -8,12 +8,17 @@ class DashboardDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Expanded(flex: 1, child: Sidebar()),
-        Expanded(flex: 3, child: MainContentArea()),
-        Expanded(flex: 2, child: ProfileOverview()),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 25.0),
+      child: const Row(
+        children: [
+          Expanded(flex: 1, child: Sidebar()),
+          SizedBox(width: 32),
+          Expanded(flex: 3, child: MainContentArea()),
+          SizedBox(width: 24),
+          Expanded(flex: 2, child: ProfileOverview()),
+        ],
+      ),
     );
   }
 }

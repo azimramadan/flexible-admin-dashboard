@@ -15,10 +15,13 @@ class SidebarBottomActions extends StatelessWidget {
       children:
           bottomActionsItems
               .map(
-                (item) => SidebarItem(
-                  isActtive: false,
-                  onTap: () {},
-                  sidebarItemModel: item,
+                (item) => Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: SidebarItem(
+                    isActtive: false,
+                    onTap: () {},
+                    sidebarItemModel: item,
+                  ),
                 ),
               )
               .toList(),

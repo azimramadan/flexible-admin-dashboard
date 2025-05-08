@@ -28,7 +28,7 @@ class _SidebarMenuListState extends State<SidebarMenuList> {
       itemCount: menuListItems.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.only(bottom: 20.0, left: 28, right: 20),
+          padding: const EdgeInsets.only(bottom: 20.0),
           child: SidebarItem(
             sidebarItemModel: menuListItems[index],
             isActtive: currentPage == index,
