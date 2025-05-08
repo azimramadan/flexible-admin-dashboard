@@ -1,4 +1,4 @@
-import 'package:flexible_dashboard_ui/core/styles/app_colors.dart';
+import 'package:flexible_dashboard_ui/core/constants/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
