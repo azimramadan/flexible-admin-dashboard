@@ -11,7 +11,7 @@ class UserBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: AppColors.lightGray,
+      color: AppColors.offWhite,
       child: ListTile(
         leading: SvgPicture.asset(userInfoModel.image),
         title: Text(
