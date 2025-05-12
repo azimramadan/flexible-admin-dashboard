@@ -1,6 +1,5 @@
 import 'package:flexible_dashboard_ui/core/constants/styles/app_colors.dart';
 import 'package:flexible_dashboard_ui/core/constants/styles/app_text_styles.dart';
-import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/profile_overview.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/transaction_header.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/transactions_list.dart';
 import 'package:flutter/material.dart';

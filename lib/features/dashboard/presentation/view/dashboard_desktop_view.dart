@@ -15,7 +15,7 @@ class DashboardDesktopView extends StatelessWidget {
         Expanded(
           flex: 3,
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 25.0),
+            padding: EdgeInsets.symmetric(vertical: 16.0),
             child: MainContentArea(),
           ),
         ),
@@ -23,7 +23,7 @@ class DashboardDesktopView extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 25.0),
+            padding: EdgeInsets.symmetric(vertical: 16.0),
             child: ProfileOverview(),
           ),
         ),
