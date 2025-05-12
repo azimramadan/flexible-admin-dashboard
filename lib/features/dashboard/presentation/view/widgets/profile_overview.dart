@@ -1,13 +1,9 @@
-import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:flexible_dashboard_ui/core/constants/app_assets.dart';
 import 'package:flexible_dashboard_ui/core/constants/styles/app_colors.dart';
 import 'package:flexible_dashboard_ui/core/constants/styles/app_text_styles.dart';
-import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/card_item.dart';
-import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/cards_page_view.dart';
-import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/dots_indicator.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/my_card_section.dart';
+import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/transaction_header.dart';
+import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/transaction_history_section.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ProfileOverview extends StatelessWidget {
   const ProfileOverview({super.key});
@@ -36,17 +32,75 @@ class MyCardSectionAndTransactionHistorySection extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         color: AppColors.white,
       ),
-      child: Column(children: [MyCardSection()]),
+      child: Column(
+        children: [
+          MyCardSection(),
+          Divider(color: Color(0xffF1F1F1), height: 48),
+          TransactionHistorySection(),
+        ],
+      ),
     );
   }
 }
 
-class TransactionHistorySection extends StatelessWidget {
-  const TransactionHistorySection({super.key});
+class TransactionsList extends StatelessWidget {
+  const TransactionsList({super.key});
 
+  static const List<List<String>> items = [
+    ['Juni Mobile App project', '13 Apr, 2022 at 3:30 PM', '\$20,129'],
+    ['Landing Page project', '13 Apr, 2022 at 3:30 PM', '\$2,000'],
+    ['Cash Withdrawal', '13 Apr, 2022 ', '\$20,129'],
+  ];
+  static const List<Color> colors = [
+    AppColors.dangerRed,
+    AppColors.successGreen,
+    AppColors.successGreen,
+  ];
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Column(
+      children: List.generate(
+        items.length,
+        (index) => TransactionItem(
+          amount: items[index][2],
+          date: items[index][1],
+          title: items[index][0],
+          color: colors[index],
+        ),
+      ),
+    );
+  }
+}
+
+class TransactionItem extends StatelessWidget {
+  const TransactionItem({
+    super.key,
+    required this.title,
+    required this.date,
+    required this.amount,
+    required this.color,
+  });
+  final String title, date, amount;
+  final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      color: AppColors.offWhite,
+      child: ListTile(
+        title: Text(title, style: AppTextStyles.montserratSemiBold16),
+        subtitle: Text(
+          date,
+          style: AppTextStyles.montserratRegular16.copyWith(
+            color: AppColors.midGray,
+          ),
+        ),
+        trailing: Text(
+          amount,
+          style: AppTextStyles.montserratSemiBold20.copyWith(color: color),
+        ),
+      ),
+    );
   }
 }
 
