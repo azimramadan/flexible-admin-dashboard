@@ -19,8 +19,8 @@ class InvoiceForm extends StatelessWidget {
             SizedBox(width: 16),
             Expanded(
               child: CustomTextField(
-                hint: 'Type customer name',
-                title: 'Customer name',
+                hint: 'Type customer email',
+                title: 'Customer Email',
               ),
             ),
           ],
@@ -30,16 +30,11 @@ class InvoiceForm extends StatelessWidget {
             Expanded(
               child: CustomTextField(
                 hint: 'Type customer name',
-                title: 'Customer name',
+                title: 'Item name',
               ),
             ),
             SizedBox(width: 16),
-            Expanded(
-              child: CustomTextField(
-                hint: 'Type customer name',
-                title: 'Customer name',
-              ),
-            ),
+            Expanded(child: CustomTextField(hint: 'USD', title: 'Item mount')),
           ],
         ),
       ],

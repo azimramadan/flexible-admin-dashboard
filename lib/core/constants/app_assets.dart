@@ -50,6 +50,10 @@ class AppAssets {
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
 
+  /// Assets for imagesMaskCard
+  /// assets/images/MaskCard.png
+  static const String imagesMaskCard = "assets/images/MaskCard.png";
+
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg
   static const String imagesMoneys = "assets/images/moneys.svg";

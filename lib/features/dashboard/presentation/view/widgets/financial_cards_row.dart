@@ -1,6 +1,5 @@
 import 'package:flexible_dashboard_ui/core/constants/app_assets.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/models/financial_card_model.dart';
-import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/all_expenses_section.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/widgets/financial_card.dart';
 import 'package:flutter/material.dart';
 
