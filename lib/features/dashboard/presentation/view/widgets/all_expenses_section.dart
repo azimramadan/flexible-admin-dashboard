@@ -9,13 +9,16 @@ class AllExpensesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         color: AppColors.white,
       ),
       child: Column(
-        children: [ExpensesHeader(), SizedBox(height: 16), FinancialCardsRow()],
+        children: [
+          Padding(padding: const EdgeInsets.all(20), child: ExpensesHeader()),
+          SizedBox(height: 16),
+          FinancialCardsRow(),
+        ],
       ),
     );
   }

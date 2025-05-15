@@ -15,7 +15,7 @@ class RecentTransactionsSection extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0),
           child: Text(
             'Latest Transaction',
-            style: AppTextStyles.montserratMedium16,
+            style: AppTextStyles.montserratMedium16(context),
           ),
         ),
         SizedBox(height: 12),

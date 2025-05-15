@@ -28,7 +28,7 @@ class _MyCardSectionState extends State<MyCardSection> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('My card', style: AppTextStyles.montserratSemiBold20),
+        Text('My card', style: AppTextStyles.montserratSemiBold20(context)),
         SizedBox(height: 20),
         CardsPageView(controller: pageController),
         SizedBox(height: 19),

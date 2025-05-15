@@ -9,7 +9,10 @@ class ExpensesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('All Expenses', style: AppTextStyles.montserratSemiBold20),
+        Text(
+          'All Expenses',
+          style: AppTextStyles.montserratSemiBold20(context),
+        ),
         Spacer(),
         TimeframeDropdown(),
       ],

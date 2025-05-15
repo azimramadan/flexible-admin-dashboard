@@ -19,21 +19,21 @@ class CardContent extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTextStyles.montserratSemiBold16.copyWith(
-            color: isActive ? AppColors.white : AppColors.darkBlue,
-          ),
+          style: AppTextStyles.montserratSemiBold16(
+            context,
+          ).copyWith(color: isActive ? AppColors.white : AppColors.darkBlue),
         ),
         Text(
           date,
-          style: AppTextStyles.montserratRegular14.copyWith(
-            color: isActive ? AppColors.offWhite : AppColors.gray,
-          ),
+          style: AppTextStyles.montserratRegular14(
+            context,
+          ).copyWith(color: isActive ? AppColors.offWhite : AppColors.gray),
         ),
         Text(
           amount,
-          style: AppTextStyles.montserratSemiBold24.copyWith(
-            color: isActive ? AppColors.white : AppColors.primaryBlue,
-          ),
+          style: AppTextStyles.montserratSemiBold24(
+            context,
+          ).copyWith(color: isActive ? AppColors.white : AppColors.primaryBlue),
         ),
       ],
     );

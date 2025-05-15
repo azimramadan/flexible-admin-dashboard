@@ -18,16 +18,18 @@ class TransactionItem extends StatelessWidget {
       elevation: 0,
       color: AppColors.offWhite,
       child: ListTile(
-        title: Text(title, style: AppTextStyles.montserratSemiBold16),
+        title: Text(title, style: AppTextStyles.montserratSemiBold16(context)),
         subtitle: Text(
           date,
-          style: AppTextStyles.montserratRegular16.copyWith(
-            color: AppColors.midGray,
-          ),
+          style: AppTextStyles.montserratRegular16(
+            context,
+          ).copyWith(color: AppColors.midGray),
         ),
         trailing: Text(
           amount,
-          style: AppTextStyles.montserratSemiBold20.copyWith(color: color),
+          style: AppTextStyles.montserratSemiBold20(
+            context,
+          ).copyWith(color: color),
         ),
       ),
     );

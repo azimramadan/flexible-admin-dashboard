@@ -10,7 +10,10 @@ class InvoiceHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('Quick Invoice', style: AppTextStyles.montserratSemiBold20),
+        Text(
+          'Quick Invoice',
+          style: AppTextStyles.montserratSemiBold20(context),
+        ),
         Spacer(),
         SvgPicture.asset(AppAssets.imagesAdd),
       ],

@@ -24,7 +24,7 @@ class InvoiceActions extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Add more details',
-              style: AppTextStyles.montserratSemiBold18,
+              style: AppTextStyles.montserratSemiBold18(context),
             ),
           ),
         ),
@@ -42,9 +42,9 @@ class InvoiceActions extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Send Money',
-              style: AppTextStyles.montserratSemiBold18.copyWith(
-                color: AppColors.white,
-              ),
+              style: AppTextStyles.montserratSemiBold18(
+                context,
+              ).copyWith(color: AppColors.white),
             ),
           ),
         ),

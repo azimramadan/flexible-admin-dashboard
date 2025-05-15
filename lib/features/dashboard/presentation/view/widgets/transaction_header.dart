@@ -9,15 +9,18 @@ class TransactionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('Transaction History', style: AppTextStyles.montserratSemiBold20),
+        Text(
+          'Transaction History',
+          style: AppTextStyles.montserratSemiBold20(context),
+        ),
         Spacer(),
         GestureDetector(
           onTap: () {},
           child: Text(
             'See all',
-            style: AppTextStyles.montserratMedium16.copyWith(
-              color: AppColors.primaryBlue,
-            ),
+            style: AppTextStyles.montserratMedium16(
+              context,
+            ).copyWith(color: AppColors.primaryBlue),
           ),
         ),
       ],

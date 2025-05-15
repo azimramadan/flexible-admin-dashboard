@@ -7,10 +7,7 @@ class MobileLayoutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      children: [
-        Expanded(child: MainContentAreaMobileAndTablet()),
-        SizedBox(width: 32),
-      ],
+      children: [Expanded(child: MainContentAreaMobileAndTablet())],
     );
   }
 }

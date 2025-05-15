@@ -10,16 +10,16 @@ class CustomTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: AppTextStyles.montserratMedium16),
+        Text(title, style: AppTextStyles.montserratMedium16(context)),
         SizedBox(height: 12),
         TextField(
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
             filled: true,
             hintText: hint,
-            hintStyle: AppTextStyles.montserratRegular16.copyWith(
-              color: AppColors.midGray,
-            ),
+            hintStyle: AppTextStyles.montserratRegular16(
+              context,
+            ).copyWith(color: AppColors.midGray),
             fillColor: AppColors.offWhite,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),

@@ -15,7 +15,7 @@ class TimeframeDropdown extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text('Monthly', style: AppTextStyles.montserratMedium16),
+          Text('Monthly', style: AppTextStyles.montserratMedium16(context)),
           Icon(Icons.keyboard_arrow_down_sharp),
         ],
       ),

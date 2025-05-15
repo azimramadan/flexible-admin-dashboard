@@ -13,7 +13,7 @@ class CardItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: AppColors.primaryBlue,
@@ -25,31 +25,31 @@ class CardItem extends StatelessWidget {
             ListTile(
               title: Text(
                 'Name card',
-                style: AppTextStyles.montserratRegular16.copyWith(
-                  color: AppColors.white,
-                ),
+                style: AppTextStyles.montserratRegular16(
+                  context,
+                ).copyWith(color: AppColors.white),
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style: AppTextStyles.montserratMedium20.copyWith(
-                  color: AppColors.white,
-                ),
+                style: AppTextStyles.montserratMedium20(
+                  context,
+                ).copyWith(color: AppColors.white),
               ),
               trailing: SvgPicture.asset(AppAssets.imagesGallery),
             ),
             Spacer(),
             Text(
               '0918 8124 0042 8129',
-              style: AppTextStyles.montserratSemiBold24.copyWith(
-                color: AppColors.white,
-              ),
+              style: AppTextStyles.montserratSemiBold24(
+                context,
+              ).copyWith(color: AppColors.white),
             ),
-            SizedBox(height: 12),
+            Flexible(child: SizedBox(height: 12)),
             Text(
               '12/20 - 124',
-              style: AppTextStyles.montserratRegular16.copyWith(
-                color: AppColors.white,
-              ),
+              style: AppTextStyles.montserratRegular16(
+                context,
+              ).copyWith(color: AppColors.white),
             ),
           ],
         ),

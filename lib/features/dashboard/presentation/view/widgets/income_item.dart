@@ -30,24 +30,24 @@ class IncomeItem extends StatelessWidget {
             incomeData.title,
             style:
                 isSelected
-                    ? AppTextStyles.montserratBold16.copyWith(
-                      color: AppColors.darkBlue,
-                    )
-                    : AppTextStyles.montserratRegular16.copyWith(
-                      color: AppColors.darkBlue,
-                    ),
+                    ? AppTextStyles.montserratBold16(
+                      context,
+                    ).copyWith(color: AppColors.darkBlue)
+                    : AppTextStyles.montserratRegular16(
+                      context,
+                    ).copyWith(color: AppColors.darkBlue),
           ),
           Spacer(),
           Text(
             '${incomeData.value}%',
             style:
                 isSelected
-                    ? AppTextStyles.montserratSemiBold18.copyWith(
-                      color: AppColors.linkBlue,
-                    )
-                    : AppTextStyles.montserratMedium16.copyWith(
-                      color: AppColors.linkBlue,
-                    ),
+                    ? AppTextStyles.montserratSemiBold18(
+                      context,
+                    ).copyWith(color: AppColors.linkBlue)
+                    : AppTextStyles.montserratMedium16(
+                      context,
+                    ).copyWith(color: AppColors.linkBlue),
           ),
         ],
       ),

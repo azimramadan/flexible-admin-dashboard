@@ -22,8 +22,8 @@ class Sidebar extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(
-                right: 24,
-                left: 20,
+                right: 16.0,
+                left: 16.0,
                 top: 28,
                 bottom: 28,
               ),

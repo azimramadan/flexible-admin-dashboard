@@ -14,13 +14,19 @@ class UserBox extends StatelessWidget {
       color: AppColors.offWhite,
       child: ListTile(
         leading: SvgPicture.asset(userInfoModel.image),
-        title: Text(
-          userInfoModel.name,
-          style: AppTextStyles.montserratSemiBold16,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            userInfoModel.name,
+            style: AppTextStyles.montserratSemiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          userInfoModel.email,
-          style: AppTextStyles.montserratRegular12,
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            userInfoModel.email,
+            style: AppTextStyles.montserratRegular12(context),
+          ),
         ),
       ),
     );

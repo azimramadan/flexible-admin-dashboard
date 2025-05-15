@@ -20,16 +20,20 @@ class SidebarItem extends StatelessWidget {
       onTap: onTap,
       child: ListTile(
         leading: SvgPicture.asset(sidebarItemModel.image),
-        title: Text(
-          sidebarItemModel.title,
-          style:
-              isActtive
-                  ? AppTextStyles.montserratSemiBold16.copyWith(
-                    color: AppColors.accentBlue,
-                  )
-                  : AppTextStyles.montserratRegular16.copyWith(
-                    color: AppColors.darkBlue,
-                  ),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            sidebarItemModel.title,
+            style:
+                isActtive
+                    ? AppTextStyles.montserratSemiBold16(
+                      context,
+                    ).copyWith(color: AppColors.accentBlue)
+                    : AppTextStyles.montserratRegular16(
+                      context,
+                    ).copyWith(color: AppColors.darkBlue),
+          ),
         ),
         trailing:
             isActtive
