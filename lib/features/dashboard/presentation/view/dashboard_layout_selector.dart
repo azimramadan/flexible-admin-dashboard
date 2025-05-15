@@ -1,3 +1,4 @@
+import 'package:flexible_dashboard_ui/core/constants/size_config.dart';
 import 'package:flexible_dashboard_ui/core/widgets/adaptive_layout.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/dashboard_desktop_view.dart';
 import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/mobile_layout_view.dart';
@@ -18,10 +19,12 @@ class _DashboardLayoutSelectorState extends State<DashboardLayoutSelector> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isMobile =
+        MediaQuery.sizeOf(context).width < SizeConfig.mobileBreakpoint;
     return Scaffold(
       key: scaffoldKey,
       appBar:
-          MediaQuery.sizeOf(context).width < 800
+          isMobile
               ? AppBar(
                 leading: IconButton(
                   onPressed: () {
@@ -35,7 +38,7 @@ class _DashboardLayoutSelectorState extends State<DashboardLayoutSelector> {
               )
               : null,
       drawer:
-          MediaQuery.sizeOf(context).width < 800
+          isMobile
               ? SizedBox(
                 width: MediaQuery.sizeOf(context).width * .7,
                 child: Sidebar(),
