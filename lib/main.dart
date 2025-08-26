@@ -4,14 +4,7 @@ import 'package:flexible_dashboard_ui/features/dashboard/presentation/view/dashb
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (context) {
-        return const FlexibleDashboard();
-      },
-    ),
-  );
+  runApp(const FlexibleDashboard());
 }
 
 class FlexibleDashboard extends StatelessWidget {
