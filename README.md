@@ -1,16 +1,37 @@
-# flexible_dashboard_ui
+# 📊 Responsive Dashboard UI
 
-A new Flutter project.
+A Flutter-based training project to practice building a clean, responsive, and scalable dashboard UI. The project focuses on layout design and adapting the interface for different screen sizes (mobile, tablet, desktop).
 
-## Getting Started
+## 🎯 Objective
 
-This project is a starting point for a Flutter application.
+- Practice responsive design in Flutter
+- Use `CustomScrollView`, `Sliver`, and `MediaQuery`
+- Build UI components like sidebar, cards, pie chart, and forms
+- Apply clean UI architecture with reusable widgets
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Preview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<p align="center">
+  <img src="screenshots/screenshot_1.jpg" width="45%" />
+  <img src="screenshots/screenshot_2.jpg" width="45%" />
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="screenshots/screenshot_3.jpg" width="45%" />
+  <img src="screenshots/screenshot_4.jpg" width="45%" />
+</p>
+
+## 🛠 Technologies
+
+- Flutter
+- `fl_chart`
+- `flutter_svg`
+- `expandable_page_view`
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/your-username/flexible_dashboard_ui.git
+cd flexible_dashboard_ui
+flutter pub get
+flutter run
